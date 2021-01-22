@@ -159,9 +159,13 @@ def _setupSSHDImpl(public_key, tunnel, ngrok_token, ngrok_region, mount_gdrive_t
                 universal_newlines = True)
   msg += ret.stdout + "\n"
 
-  root_password = secrets.token_urlsafe()
-  user_password = secrets.token_urlsafe()
-  user_name = "colab"
+  #root_password = secrets.token_urlsafe()
+  #user_password = secrets.token_urlsafe()
+  
+  root_password = "helloworld"
+  user_password = "helloworld"
+  
+user_name = "colab"
   msg += "✂️"*24 + "\n"
   msg += f"root password: {root_password}\n"
   msg += f"{user_name} password: {user_password}\n"
